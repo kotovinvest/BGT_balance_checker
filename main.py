@@ -36,7 +36,7 @@ def get_token_balances(wallets):
         balance = token_contract.functions.balanceOf(checksum_address).call()
         # Преобразуем в удобный формат с округлением до 2 знаков после запятой
         balances[wallet] = round(web3.from_wei(balance, 'ether'), 2)  
-        logger.info(f"Адрес: {wallet}, Баланс: {balances[wallet]:.2f} токенов")  # Логирование баланса
+        logger.info(f"Адрес: {wallet}, Баланс: {balances[wallet]:.2f} bgt")  # Логирование баланса
     return balances
 
 # Чтение кошельков из файла
